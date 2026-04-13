@@ -1,6 +1,6 @@
 # -Tarea-2-Ejercicios-con-interval
 Ejercicios con set interval
-.[!NOTE].
+
 Alumno: Víctor Manuel Piñar Murillo
 
 Ejercicio 1 es:
