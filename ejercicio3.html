@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
+    <title>Ejercicio 3</title>
 </head>
 <body>
-    <p id="resultado"></p>
+    <p id="resultado">hola</p>
     <button id="btn1" onclick="iniciar()">Iniciar</button>
     <button id="btn2" onclick="detener()">Detener</button>
 </body>
 <script>
+    let visible = true
     let intervalo = null
     const resultado = document.getElementById("resultado")
 
     function iniciar() {
-        let cuenta = 10
-        resultado.innerHTML = cuenta
         intervalo = setInterval(function () {
-            cuenta = cuenta - 1
-            resultado.innerHTML = cuenta
-            if (cuenta === 0) {
-                clearInterval(intervalo)
-                resultado.innerHTML = "¡Tiempo!"
+            visible = !visible
+            if (visible) {
+                resultado.style.visibility = "visible"
+            } else {
+                resultado.style.visibility = "hidden"
             }
-        }, 1000)
+        }, 500)
     }
     function detener() {
         clearInterval(intervalo)
