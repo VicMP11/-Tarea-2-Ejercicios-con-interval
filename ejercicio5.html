@@ -10,7 +10,7 @@
     <p id="resultado"></p>
     <button id="btn1" onclick="jugar()">Jugar</button>
     <button id="btn2" onclick="parar()">¡Para!</button>
-    <button id="btn3" onclick="jugar()">Jugar de nuevo</button>
+    <button id="btn3" onclick="jugarNuevo()">Jugar de nuevo</button>
 </body>
 <script>
     let numeroActual = 1
@@ -30,6 +30,11 @@
         } else {
             resultado.innerHTML = "Era el " + numeroActual + ", inténtalo de nuevo."
         }
+    }
+    function jugarNuevo() {
+        clearInterval(intervalo)
+        juego.innerHTML = null
+        resultado.innerHTML = null
     }
 </script>
 </html>
